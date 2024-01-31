@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Programming Languages Orbiting Earth</title>
+    <style>
+        #universe {
+            position: center;
+            width: 500px;
+            height: 500px;
+        }
+
+        #earth {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            /* 지구의 크기를 조절하세요 */
+        }
+
+        .language {
+            position: absolute;
+            width: 50px;
+            /* 로고의 크기를 조절하세요 */
+            animation: orbit 10s linear infinite;
+            /* 애니메이션 시간 조절 가능 */
+        }
+
+        /* @keyframes orbit {
+            from {
+                transform: rotate(0deg) translateX(200px) rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg) translateX(200px) rotate(-360deg);
+            } */
+        /* } */
+    </style>
+</head>
+
+<body>
+    <div id="universe">
+        <img id="earth" src="/images/laptop.png" alt="Earth">
+        <img class="language" src="/images/python.svg" alt="Python">
+        <img class="language" src="/images/Swift.png" alt="Python">
+        <img class="language" src="/images/c--4.svg" alt="Python">
+        <img class="language" src="/images/java.svg" alt="Python">
+        <img class="language" src="/images/javascript.svg" alt="Python">
+        <img class="language" src="/images/kotlin.svg" alt="Python">
+        <!-- 여기에 더 많은 프로그래밍 언어 로고를 추가할 수 있습니다 -->
+    </div>
+    <!-- <script>
+        const earth = document.getElementById('earth');
+        const languages = document.querySelectorAll('.language');
+    
+        const earthRadius = 50; // Half of the Earth image width
+        const orbitRadius = 200; // Desired orbit radius
+        const speed = 0.0005; // Rotation speed
+    
+        function updatePosition(el, angle, radius) {
+            // Calculate the center of the Earth image
+            const earthCenterX = earth.offsetLeft + earth.offsetWidth / 2;
+            const earthCenterY = earth.offsetTop + earth.offsetHeight / 2;
+    
+            // Calculate new positions based on the center of the Earth
+            const x = earthCenterX + radius * Math.cos(angle) - el.offsetWidth / 2;
+            const y = earthCenterY + radius * Math.sin(angle) - el.offsetHeight / 2;
+    
+            el.style.left = `${x}px`;
+            el.style.top = `${y}px`;
+        }
+    
+        function animate() {
+            languages.forEach((lang, index) => {
+                const angle = performance.now() * speed + index * (2 * Math.PI / languages.length);
+                updatePosition(lang, angle, orbitRadius);
+            });
+            requestAnimationFrame(animate);
+        }
+    
+        animate();
+    </script> -->
+    <script>
+        const earth = document.getElementById('earth');
+        const languages = document.querySelectorAll('.language');
+    
+        const earthWidth = earth.offsetWidth; // 지구 이미지의 너비
+        const earthHeight = earth.offsetHeight; // 지구 이미지의 높이
+        const orbitRadius = 200; // 궤도의 반경 (픽셀)
+        const speed = 0.0005; // 회전 속도
+    
+        function updatePosition(el, angle, radius) {
+            const earthCenterX = earth.offsetLeft + earthWidth / 2;
+            const earthCenterY = earth.offsetTop + earthHeight / 2;
+    
+            const x = earthCenterX + radius * Math.cos(angle) - el.offsetWidth / 2;
+            const y = earthCenterY + radius * Math.sin(angle) - el.offsetHeight / 2;
+    
+            el.style.left = `${x}px`;
+            el.style.top = `${y}px`;
+        }
+    
+        function animate() {
+            languages.forEach((lang, index) => {
+                const angle = performance.now() * speed + index * (2 * Math.PI / languages.length);
+                updatePosition(lang, angle, orbitRadius);
+            });
+            requestAnimationFrame(animate);
+        }
+    
+        animate();
+    </script>
+    
+</body>
+
+</html>
