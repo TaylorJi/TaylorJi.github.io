@@ -3,116 +3,318 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Programming Languages Orbiting Earth</title>
-    <style>
-        #universe {
-            position: center;
-            width: 500px;
-            height: 500px;
-        }
-
-        #earth {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100px;
-            /* 지구의 크기를 조절하세요 */
-        }
-
-        .language {
-            position: absolute;
-            width: 50px;
-            /* 로고의 크기를 조절하세요 */
-            animation: orbit 10s linear infinite;
-            /* 애니메이션 시간 조절 가능 */
-        }
-
-        /* @keyframes orbit {
-            from {
-                transform: rotate(0deg) translateX(200px) rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg) translateX(200px) rotate(-360deg);
-            } */
-        /* } */
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="test.css">
+    <title>Taylor Ji</title>
 </head>
 
 <body>
-    <div id="universe">
-        <img id="earth" src="/images/laptop.png" alt="Earth">
-        <img class="language" src="/images/python.svg" alt="Python">
-        <img class="language" src="/images/Swift.png" alt="Python">
-        <img class="language" src="/images/c--4.svg" alt="Python">
-        <img class="language" src="/images/java.svg" alt="Python">
-        <img class="language" src="/images/javascript.svg" alt="Python">
-        <img class="language" src="/images/kotlin.svg" alt="Python">
-        <!-- 여기에 더 많은 프로그래밍 언어 로고를 추가할 수 있습니다 -->
-    </div>
-    <!-- <script>
-        const earth = document.getElementById('earth');
-        const languages = document.querySelectorAll('.language');
+
+    <nav>
+        <!-- <div class="nav-logo">
+            <p>TJ</p>
+            <a href="#">
+                <img src="images/logo.webp">
+            </a>
+        </div> -->
+        
+
+        <ul class="nav-links">
+            <li class="link"><a href="#">Home</a></li>
+            <li id="link1" class="link"><a href="#">Tech Stack</a></li>
+            <li id="link2" class="link"><a href="#">Projects</a></li>
+            <li id="link3" class="link"><a href="#">About</a></li>
+        </ul>
+        <a href="mailto:taylor.ji719@gmail.com" class="btn">Contact</a>
+
+    </nav>
+
+    <header class="container">
+        <div class="content">
+            <span class="blur"></span>
+            <span class="blur"></span>
+            <h1>Hi, I'm <span>Taylor Ji</span> 
+                <br> 
+                Full stack and Mobile Developer</h1>
+            <p>
+                My name is Taylor, and I am a passionate software developer with a zeal for continuous learning. 
+                I thrive on transforming intangible ideas into tangible services and products.
+                Having specialized in Web and Mobile Development in the Computer Systems Technology program at BCIT, I possess a strong foundation in web and mobile developments. 
+                My enthusiasm for embracing new technologies is coupled with my ability to rapidly acquire new skills, making me an adaptable and forward-thinking professional.
+            </p>
+      
+        </div>
+        <div class="image">
+            <img src="images/main.jpeg">
+        </div>
+    </header>
+
+
+    <section class="container">
+        <h2 class="header">Tech Stack</h2>
+        <div class="techStack">
     
-        const earthRadius = 50; // Half of the Earth image width
-        const orbitRadius = 200; // Desired orbit radius
-        const speed = 0.0005; // Rotation speed
+
+            <div class="card">
+                <div class="content">
+                    <h4>Lanagues:</h4>
+                    <p>
+                        <div class="inline-description">
+                            <img src="images/swift.png" alt="swift" class="tech-image">
+                            <span class="inline-name">Swift</span>
+                        </div>
+                    </p>
+
+
+                    <p>
+                        <div class="inline-description">
+                            <img src="images/kotlin.svg" alt="kotlin" class="tech-image">
+                            <span class="inline-name">Kotlin</span>
+                        </div>
+                    </p>
+                    <p>
+                        <div class="inline-description">
+                            <img src="images/java.svg" alt="Java" class="tech-image">
+                            <span class="inline-name">Java</span>
+                        </div>
+                    </p>
+                    <p>
+                        <div class="inline-description">
+                            <img src="images/javascript.svg" alt="js" class="tech-image">
+                            <span class="inline-name">JavaScript</span>
+                        </div>
+                    </p>
+                    <p>
+                        <div class="inline-description">
+                            <img src="images/c--4.svg" alt="C#" class="tech-image">
+                            <span class="inline-name">C#</span>
+                        </div>
+                    </p>
+                    <p>
+                        <div class="inline-description">
+                            <img src="images/python.svg" alt="python" class="tech-image">
+                            <span class="inline-name">Python</span>
+                        </div>
+                    </p>
+                    <p>
+
+                        <div class="inline-description">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="tech-image">
+                            <span class="inline-name">TypeScript</span>
+                        </div>
+                    </p>
+
+                    <p>
+
+                        <div class="inline-description">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="tech-image">
+                            <span class="inline-name">PHP</span>
+                        </div>
+                    </p>
+   
+
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h4>Databses, frameworks, and libraries:</h4>
+                    <p>
+                        <div class="inline-description">
+                            <img src="images/mysql.svg" alt="MySQL" class="tech-image">
+                            <span class="inline-name">MySQL</span>
+                        </div>
+                    </p>
+                    <p>
+                        <div class="inline-description">
+                            <img src="images/MongoDB-01.jpg" alt="TypeScript" class="tech-image">
+                            <span class="inline-name">MongoDB</span>
+                        </div>
+                    </p>
+                    <p>
+                        <div class="inline-description">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain-wordmark.svg" alt="TypeScript" class="tech-image">
+                            <span class="inline-name">Firebase</span>
+                        </div>
+                    </p>
+                    <p>
+
+                        <div class="inline-description">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain-wordmark.svg" alt="Laravel" class="tech-image">
+                            <span class="inline-name">Laravel</span>
+                        </div>
+                    </p>
+                    <p>
+                        <div class="inline-description">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="tech-image">
+                            <span class="inline-name">Node.js</span>
+                        </div>
+                    </p>
+
+                    <p>
+                        <div class="inline-description">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt="React.js" class="tech-image">
+                            <span class="inline-name">React.js</span>
+                        </div>
+                    </p>
+
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h4>IDEs and Version Control:</h4>
+                    <p>
+                        <div class="inline-description">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xcode/xcode-original.svg" alt="Xcode" class="tech-image">
+                            <span class="inline-name">Xcode</span>
+                        </div>
+                    </p>
+                    <p>
+                        <div class="inline-description">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" alt="AndroidStudio" class="tech-image">
+                            <span class="inline-name">AndroidStudio</span>
+                        </div>
+                    </p>
+                    <p>
+
+                        <div class="inline-description">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original-wordmark.svg" alt="IntelliJ" class="tech-image">
+                            <span class="inline-name">IntelliJ</span>
+                        </div>
+                    </p>
+                    <p>
+                       
+
+                        <div class="inline-description">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original-wordmark.svg" alt="Visual Studio Code" class="tech-image">
+                            <span class="inline-name">Visual Studio Code</span>
+                        </div>
+                    </p>
+                    <p>
+                        <div class="inline-description">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain-wordmark.svg" alt="Git" class="tech-image">
+                            <span class="inline-name">Git</span>
+                        </div>
+                    </p>
+                    <p>
+                        
+                        <div class="inline-description">
+                            <img src="images/github.png" alt="GitHub" class="tech-image">
+                            <span class="inline-name">GitHub</span>
+                        </div>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="header">Projects</h2>
+        <div class="projects">
+            <div class="card">
+                <div class="card-media">
+                    <video width="200" height="200" controls>
+                        <source src="/videos/GameReal.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="card-content">
+                    <h4><a href="https://github.com/TaylorJi/WordWar" target="_blank">Word War</a></h4>
+                    <strong>[Swift, Xcode, UIKit, and Firebase]</strong>
+                    <p>
+                        Play an English Shiritori game where players must enter a word that starts with the last
+                        letter of the previous word. The objective is to avoid using words that have already been
+                        used and to score as many points as possible.
+                    </p>
+                    
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-media">
+                    <video width="200" height="200" controls>
+                        <source src="/videos/Nonprofit.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="card-content">
+                    <h4><a href="https://github.com/TaylorJi/Non-Profit-Donation-Management-Application" target="_blank">Non-profit Management System</a></h4>
+                    <strong>[C#, .NET, and SQLite Server]</strong>
+                    <p>
+                        A web application for non-profit organization to collect donations and automate donation collection and tax receipt issuance
+
+                    </p>
+              
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-media">
+                    <video width="200" height="200" controls>
+                        <source src="/videos/Chatpple.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="card-content">
+                    <h4><a href="https://github.com/TaylorJi/ChatApple" target="_blank">Chatpple</a></h4>
+                    <strong>[Swift, Xcode, UIKit, Storyboard, and Firebase]</strong>
+                    <p>
+                        Real time chatting application that allows users to communicate with each other in a chatroom.
+                    </p>
+                    
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-media">
+                    <video width="200" height="200" controls>
+                        <source src="/videos/TrivialGame.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="card-content">
+                    <h4><a href="https://github.com/TaylorJi/WordWar" target="_blank">Trivia Game</a></h4>
+                    <strong>[Swift, Xcode]</strong>
+                    <p>
+                        Play a quiz game where users must answer questions correctly to score points. 
+                        The objective is to score as many points as possible.
+                    </p>
+                   
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
+
     
-        function updatePosition(el, angle, radius) {
-            // Calculate the center of the Earth image
-            const earthCenterX = earth.offsetLeft + earth.offsetWidth / 2;
-            const earthCenterY = earth.offsetTop + earth.offsetHeight / 2;
-    
-            // Calculate new positions based on the center of the Earth
-            const x = earthCenterX + radius * Math.cos(angle) - el.offsetWidth / 2;
-            const y = earthCenterY + radius * Math.sin(angle) - el.offsetHeight / 2;
-    
-            el.style.left = `${x}px`;
-            el.style.top = `${y}px`;
-        }
-    
-        function animate() {
-            languages.forEach((lang, index) => {
-                const angle = performance.now() * speed + index * (2 * Math.PI / languages.length);
-                updatePosition(lang, angle, orbitRadius);
-            });
-            requestAnimationFrame(animate);
-        }
-    
-        animate();
-    </script> -->
-    <script>
-        const earth = document.getElementById('earth');
-        const languages = document.querySelectorAll('.language');
-    
-        const earthWidth = earth.offsetWidth; // 지구 이미지의 너비
-        const earthHeight = earth.offsetHeight; // 지구 이미지의 높이
-        const orbitRadius = 200; // 궤도의 반경 (픽셀)
-        const speed = 0.0005; // 회전 속도
-    
-        function updatePosition(el, angle, radius) {
-            const earthCenterX = earth.offsetLeft + earthWidth / 2;
-            const earthCenterY = earth.offsetTop + earthHeight / 2;
-    
-            const x = earthCenterX + radius * Math.cos(angle) - el.offsetWidth / 2;
-            const y = earthCenterY + radius * Math.sin(angle) - el.offsetHeight / 2;
-    
-            el.style.left = `${x}px`;
-            el.style.top = `${y}px`;
-        }
-    
-        function animate() {
-            languages.forEach((lang, index) => {
-                const angle = performance.now() * speed + index * (2 * Math.PI / languages.length);
-                updatePosition(lang, angle, orbitRadius);
-            });
-            requestAnimationFrame(animate);
-        }
-    
-        animate();
-    </script>
-    
+
+    <footer class="container">
+     
+        <div class="column">
+            <a href="https://www.linkedin.com/in/taylor-ji/" target="_blank"><img src="/images/linkedin.png" alt="linkedin"></a>
+          
+        </div>
+        <div class="column">
+            <a href="https://github.com/TaylorJi" target="_blank"><img src="/images/github.png" alt="git"></a>
+       
+        </div>
+        <div class="column">
+            <a href="mailto:taylor.ji719@gmail.com"><img src="/images/mail.png" alt="email"></a>
+     
+        </div>
+    </footer>
+
+
+
+    <script src="test.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+
+</script>
 </body>
 
 </html>

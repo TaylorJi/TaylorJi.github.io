@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #18181B;
+}
+
+nav{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-logo{
+    max-width: 100px;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link a{
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #fff;
+}
+
+.link a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1d4ed8;
+    transition: all 0.3s ease;
+}
+
+.link a:hover::after{
+    width: 70%;
+}
+
+.btn{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1d4ed8;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    background-color: #1e40af;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.blur{
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #1d4ed8;
+    z-index: -100;
+}
+
+header{
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+header .content h4{
+    margin-bottom: 1rem;
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+header .content h1{
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+header .content h1 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+header .content p{
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+header .image{
+    position: relative;
+}
+
+header .image::before{
+    content: "o";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 38rem;
+    font-weight: 400;
+    line-height: 20rem;
+    color: #1d4ed8;
+    opacity: 0.2;
+    z-index: -100;
+}
+
+header .image img{
+    max-width: 600px;
+    margin: auto;
+}
+
+section .header{
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+
+.nav-active .nav-links {
+    display: block; /* Show navigation links */
+    position: absolute;
+    width: 100%;
+    top: 60px; /* Adjust based on your layout */
+    left: 0;
+    background: #fff; /* or your preferred background color */
+    z-index: 10;
+}
+
+.projects{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+
+.projects .card {
+    display: flex;
+    align-items: center;
+    background-color: #27272a;
+    padding: 1rem;
+    border-radius: 15px;
+    gap: 20px; /* Spacing between video and text */
+}
+
+.projects .card .card-media {
+    flex: 1; /* Adjusts the space for video */
+    /* Ensure video doesn't exceed card boundaries */
+    max-width: 200px; /* Set maximum width for video */
+}
+
+.projects .card .card-content {
+    flex: 2; /* Adjusts the space for content */
+    color: #fff; /* Text color */
+}
+
+.projects .card h4, .projects .card p {
+    margin: 0; /* Removes default margins */
+}
+
+
+
+.sub-header{
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    color: #ccc;
+}
+
+.techStack{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: #fff;
+    gap: 2rem;
+}
+
+.techStack .card{
+    padding: 3rem 2rem;
+    background-color: #27272a;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.techStack .card:hover{
+    background-color: #323232;
+    border-color: #fff;
+}
+
+.techStack .card .content{
+    flex: 1;
+    margin-bottom: 2rem;
+}
+
+.techStack .card h4{
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.techStack .card h3{
+    color: #fff;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    border-bottom: 2px dashed #fff;
+}
+
+.techStack .card p{
+    color: #fff;
+    margin-bottom: 0.75rem;
+}
+
+.techStack .card p i{
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-right: 0.3rem;
+}
+
+.techStack .card button{
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+.techStack .card button:hover{
+    background-color: #1e40af;
+    border-color: #1e40af;
+}
+
+
+
+.inline-description{
+    color: #fff;
+    display: flex;
+    align-items: center;
+
+}
+
+.tech-image {
+    width: 50px; /* Adjust the size as needed */
+    height: 50px; /* Adjust the size as needed */
+    object-fit: cover; /* Keeps the aspect ratio of the image */
+    margin-right: 10px; /* Adds some space between the image and the text */
+}
+
+.inline-name {
+    display: inline-block; /* Ensures the text is inline with the image */
+    margin-left: 15px;
+    /* Add additional styling for the text if needed */
+}
+
+
+footer {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 2rem;
+    padding: 2rem 0;
+    border: 2px solid #1d4ed8; /* Blue border */
+}
+
+footer img {
+    width: 20%; /* Adjust the image width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+footer .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+}
+
+footer .column p, footer .column h4, footer .column a {
+    color: #ccc; /* Text color */
+    text-align: center; /* Center text */
+    margin-bottom: 1rem; /* Spacing between elements */
+}
+
+
+
+
+
+@media (width < 900px){
+   
+    .btn{
+        display: none;
+    }
+
+    header{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header .image{
+        grid-area: 1/1/2/2;
+    }
+    .projects{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .techStack{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer{
+        grid-template-columns: 1fr 200px;
+    }
+}
+
+@media (width < 600px){
+  
+    .btn{
+        display: none;
+    }
+
+   
+    header .image::before{
+        display: none;
+    }
+
+    .projects{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .techStack{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer{
+        grid-template-columns: 1fr 150px;
+    }
+}
