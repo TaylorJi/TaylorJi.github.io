@@ -117,9 +117,19 @@ img {
     width: 100%;
 }
 
+.contact{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+
+}
+
 .contact img{
-    width: 30px;
+    width: 50px;
     height: auto;
+    margin: 20px;
 }
 
 
