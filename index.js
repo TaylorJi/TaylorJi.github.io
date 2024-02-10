@@ -1,30 +1,39 @@
+function scrollToElement(elementSelector, instance = 0) {
+    // Select all elements that match the given selector
+    const elements = document.querySelectorAll(elementSelector);
+    // Check if there are elements matching the selector and if the requested instance exists
+    if (elements.length > instance) {
+        // Scroll to the specified instance of the element
+        elements[instance].scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+const link1 = document.getElementById("link1");
+const link2 = document.getElementById("link2");
+const link3 = document.getElementById("link3");
+
+link1.addEventListener('click', () => {
+    event.preventDefault();
+    scrollToElement('.header');
+});
+
+link2.addEventListener('click', () => {
+    event.preventDefault();
+    // Scroll to the second element with "header" class
+    scrollToElement('.header', 1);
+});
+
+link3.addEventListener('click', () => {
+    event.preventDefault();
+    scrollToElement('.column');
+});
 
 
-        // const earth = document.getElementById('earth');
-        // const languages = document.querySelectorAll('.language');
-    
-        // const earthWidth = earth.offsetWidth; // 지구 이미지의 너비
-        // const earthHeight = earth.offsetHeight; // 지구 이미지의 높이
-        // const orbitRadius = 200; // 궤도의 반경 (픽셀)
-        // const speed = 0.0005; // 회전 속도
-    
-        // function updatePosition(el, angle, radius) {
-        //     const earthCenterX = earth.offsetLeft + earthWidth / 2;
-        //     const earthCenterY = earth.offsetTop + earthHeight / 2;
-    
-        //     const x = earthCenterX + radius * Math.cos(angle) - el.offsetWidth / 2;
-        //     const y = earthCenterY + radius * Math.sin(angle) - el.offsetHeight / 2;
-    
-        //     el.style.left = `${x}px`;
-        //     el.style.top = `${y}px`;
-        // }
-    
-        // function animate() {
-        //     languages.forEach((lang, index) => {
-        //         const angle = performance.now() * speed + index * (2 * Math.PI / languages.length);
-        //         updatePosition(lang, angle, orbitRadius);
-        //     });
-        //     requestAnimationFrame(animate);
-        // }
-    
-        // animate();
+document.addEventListener('DOMContentLoaded', function () {
+    var hamburger = document.getElementById('hamburger');
+    var navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', function () {
+        navLinks.classList.toggle('nav-active');
+    });
+});
